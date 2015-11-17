@@ -172,7 +172,7 @@ def get_human_readable(size, precision=2):
     while size >= 1024:
         suffixIndex += 1
         size = size/1024.0
-    return "%.*f %s"%(precision,size,suffixes[suffixIndex])
+    return "{0:.{1}f} {2}".format(precision,size,suffixes[suffixIndex])
 
 
 def main():
